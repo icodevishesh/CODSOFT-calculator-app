@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+ <div class="outer">
+  <div class="container-top">
+    <span class="calc">calc</span>
+    <div class="icon">
+      <img src="images/brush-solid.svg" id="js-icon" class="theme-icon" onclick="toggleTheme()">   
+    </div>
+    
+    
+  </div>
+</div> 
+<div class="container-mid">
+    <div class="result-bar">
+      <div class="js-result"></div>
+  </div>  
+</div>  
+<div class="outer-bottom">
+  <div class="container-bottom">
+    <button onclick="
+    updateCalc('7');
+    " class="row-1">7</button>
+    
+    <button onclick="
+    updateCalc('8');
+    " class="row-2">8</button>
+    
+    <button onclick="
+    updateCalc('9');
+    " class="row-3">9</button>
+
+    <button onclick="
+    deleteValues();
+    " class="js-del-btn row-4 del-btn">DEL</button><br><br>
+      
+    <button onclick="
+    updateCalc('4');
+    " class="row-1">4</button>
+
+    <button onclick="
+    updateCalc('5');
+    " class="row-2">5</button>
+
+    <button onclick="
+    updateCalc('6');
+    " class="row-3">6</button>
+
+    <button onclick="
+    updateCalc('+');
+    " class="row-4">+</button><br><br>
+
+    <button onclick="
+    updateCalc('1');
+    " class="row-1">1</button>
+
+    <button onclick="
+    updateCalc('2');
+    " class="row-2">2</button>
+
+    <button onclick="
+    updateCalc('3');
+    " class="row-3">3</button>
+
+    <button onclick="
+    updateCalc('-');
+    " class="row-4">-</button><br><br>
+
+    
+    <button onclick="
+    updateCalc('.');
+    " class="row-1">.</button>
+
+    <button onclick="
+    updateCalc('0');
+    " class="row-2">0</button>
+    
+    <button onclick="
+    updateCalc('/');
+    " class="row-3">/</button>
+
+    <button onclick="
+    updateCalc('*');
+    " class="row-4">x</button><br><br>
+
+    <button onclick="
+    calculation = '';
+    calculationResult();
+    localStorage.setItem('calculation',calculation);
+    " class="reset-button">RESET</button>
+
+    <button onclick="
+    calculation = eval(calculation);
+    calculationResult();
+    " class="equals-button">=</button>
+  </div>
+
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
